@@ -1,0 +1,10 @@
+{
+    "name": "spam",
+    "version": "0.1.0",
+    "scripts": {
+        "start": "electron ./data/index.html"
+    },
+    "dependencies": {
+        "electron": "4.1.4"
+    }
+}
